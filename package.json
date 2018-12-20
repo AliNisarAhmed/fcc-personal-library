@@ -1,0 +1,52 @@
+{
+  "name": "fcc-personal-library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-watch": "parcel watch ./client/index.html",
+    "start-watch": "nodemon server/server.js",
+    "dev": "concurrently --kill-others \"npm run start-watch\" \"npm run build-watch\"",
+    "build": "parcel build ./client/index.html",
+    "start": "npm run build && node server/server.js",
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/plugin-transform-async-to-generator": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.2.0",
+    "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4",
+    "helmet": "^3.15.0",
+    "mongoose": "^5.4.0",
+    "parcel-bundler": "^1.11.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-transform-runtime"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "mocha": "^5.2.0",
+    "sass": "^1.15.2"
+  }
+}

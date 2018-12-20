@@ -1,0 +1,122 @@
+$color-dark: #ff2e63;
+$color-light: #fce38a;
+$color-medium: #08d9d6;
+$color-background: #252a34;
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $color-background;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  // align-items: center;
+}
+
+#title {
+  color: $color-dark;
+  text-align: center;
+}
+
+#addBookForm {
+  border: 1px solid $color-dark;
+  display: inline-block;
+  padding: 20px 30px;
+  border-radius: 20px;
+  align-self: center;
+
+  h4 {
+    text-align: center;
+    margin-top: 0;
+  }
+
+  input {
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    border-radius: 10px;
+    border: 2px solid $color-dark;
+    color: $color-dark;
+    margin: 10px;
+    background-color: $color-light;
+
+    &::placeholder {
+      color: $color-dark;  
+    }
+
+    &[type="submit"] {
+      background-color: $color-light;
+      color: $color-dark;
+      cursor: pointer;
+    }
+    
+    &:hover::placeholder {
+      color: $color-light;
+    }
+
+    &:hover, &:focus, &:active {
+      border: 2px solid $color-dark;
+      color: $color-light;
+      background-color: $color-dark;
+    }
+  }
+}
+
+.secondary-heading {
+  color: $color-dark;
+  font-size: 20px;
+}
+
+.tertiary-heading {
+  color: $color-medium;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.bookList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+
+.book {
+  background: $color-light;
+  border: 2px solid $color-dark;
+  border-radius: 10px;
+  height: 150px;
+  padding: 0 10px;
+  text-align: center;
+
+  display: flex;
+  flex-flow: column;
+
+  span {
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  h4 {
+    font-size: 20px;
+    text-transform: capitalize;
+  }
+
+  p {
+    color: $color-medium;
+    margin-top: auto;
+  }
+}
+
+.cta {
+  color: $color-light;
+  font-size: 26px;
+  font-style: italic;
+  font-weight: lighter;
+  display: block;
+  width: 100%;
+}
